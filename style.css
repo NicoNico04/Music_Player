@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.container{
+    display: flex;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+/* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 5px;
+}
+  
+.main{
+    background-color: #fff1c7;
+    height: 100vh;
+    width: 70%;
+
+    transition: 1s ease-in-out;
+}
+
+.main .nav{
+    display: flex;
+    background-color: #fff1c7;
+    justify-content: space-around;
+}
+
+.main .nav img{
+    width: 15px;
+    height: 15px;
+}
+
+.main .nav button{
+    margin: 10px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 3px;
+    border: 1px #000 solid;
+    background-color: transparent;
+}
+
+.player{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+}
+
+.player .img_song{
+    border-radius: 100%;
+    width: 30%;
+    animation: 10s linear Giriri infinite;
+    box-shadow: 0px 0px 50px  #9d00a2;
+}
+
+
+@keyframes Giriri{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.player_time{
+    width: 50%;
+}
+
+.player_line{
+    position: relative;
+    width: 100%;
+    height: 1rem;
+    border-radius: 8px;
+    background-color: transparent;
+    border: 1px solid #000;
+}
+
+.player_line::after{
+    content: "";
+    position: absolute;
+    background-color: #9d00a2;
+    width: 50%;
+    height: inherit;
+    border-radius: 8px;
+    top: -1px;
+    left: -1px;
+}
+
+.player_controls {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.player_controls img{
+    width: 20px;
+}
+
+
+.songs{
+    width: 30%;
+    height: 100vh;
+    background-color: #fff9e5;
+    overflow-y: scroll;
+
+    transition: 1s ease-in-out;
+}
+
+.por_reproducir{
+    display: flex;
+    height: 100px;
+    width: 100%;
+    background-color: #faecbd;
+    transition: .4s ease-in-out all;
+}
+
+.SONG_DESCRIPTION{
+    margin: 10px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.por_reproducir img{
+    margin: 10px;
+    border-radius: 10px;
+    width: 30%;
+    object-fit:contain;
+}
+
+.por_reproducir:hover{
+    background-color: #d1d1ff;
+}
+
+.main_toggle{
+    width: 100%;
+}
+
+.aside_toggle{
+    width: 0%;
+}
+
+@media (max-width: 600px){
+    .container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .main{
+        width: 100%;
+    }
+    .songs{
+        width: 100%;
+    }
+}
