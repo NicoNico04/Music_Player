@@ -9,13 +9,7 @@
 <body>
     <div class="container">
         <aside class="songs">
-            <article class="por_reproducir">
-                <img src="icons/micorazon.jpg" alt="">
-                <section class="SONG_DESCRIPTION">
-                    <p>Mi corazon</p>
-                    <p>Pate de fua</p>
-                </section>
-            </article>
+    
         </aside>
         <main class="main">
             <nav class="nav">
@@ -23,23 +17,25 @@
                 <button class="Library">Library<img src="icons/nota-musical.png" alt="" ></button>
             </nav>
             <div class="player">
-                <img src="icons/bembelequa.jpg" alt="" class="img_song">
-                <h1>Bembelequa</h1>
-                <h4>Celia Cruz</h4><!-- Es un div encima de otro div, usando animate en css  -->
+                <div class="main_song">
+                    <img src="icons/bembelequa.jpg" alt="" class="img_song">
+                    <h1>Bembelequa</h1>
+                    <h4>Celia Cruz</h4>
+                </div>
                 <div class="player_time">
                     <div class="player_line">
                     </div>
                 </div>
                 <section class="player_controls">
-                    <img src="icons/atras.png" alt="">
-                    <img src="icons/pausa.png" alt="">
-                    <img src="icons/siguiente.png" alt="">
+                    <img src="icons/atras.png" alt="" id="atras">
+                    <img src="icons/pausa.png" alt="" id="pausa">
+                    <img src="icons/siguiente.png" alt="" id="siguiente">
                 </section>
             </div>
 
         </main>    
     </div>
-
-    <script src="main.js"></script>
+    
+    <script src="main.js" type="module"></script>
 </body>
 </html>
